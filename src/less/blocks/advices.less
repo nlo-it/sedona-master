@@ -1,0 +1,46 @@
+.advices {
+  display: flex;
+  flex-wrap: wrap;
+  .list-reset();
+}
+
+.advices__item {
+  position: relative;
+  box-sizing: border-box;
+  padding: 161px 4% 68px;
+  width: 33.333333%;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 76px;
+    background-repeat: no-repeat;
+  }
+
+  &--house::before {
+    background-image: url("../img/icon-house.svg");
+    background-size: 75px 72px;
+  }
+
+  &--burger::before {
+    background-image: url("../img/icon-burger.svg");
+    background-size: 74px 70px;
+  }
+
+  &--gift::before {
+    background-image: url("../img/icon-gift.svg");
+    background-size: 64px 76px;
+  }
+}
+
+.advices__title {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 21px;
+  font-weight: 700;
+}

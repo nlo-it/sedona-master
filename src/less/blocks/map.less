@@ -1,0 +1,25 @@
+.map {
+  position: relative;
+  height: 593px;
+  overflow: hidden;
+}
+
+.map__image,
+.map__interactive {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 1280px;
+}
+
+.map__image {
+  z-index: 5;
+  height: 747px;
+}
+
+.map__interactive {
+  z-index: 10;
+  width: 1200px;
+  height: 593px;
+}

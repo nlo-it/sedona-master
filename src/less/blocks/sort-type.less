@@ -1,0 +1,33 @@
+.sort-type {
+  display: flex;
+  flex-wrap: wrap;
+  .list-reset(10px);
+}
+
+.sort-type__item {
+  padding-right: 33px;
+}
+
+.sort-type__link {
+  color: fade(@font-color-menu, 30%);
+  border-bottom: 1px dotted @bg-color-button-social;
+
+  &:hover,
+  &--active {
+    color: @bg-color-button-social;
+  }
+
+  &:active {
+    color: @font-color-menu;
+    border-bottom: 0;
+  }
+
+  &:focus {
+    outline: 1px dashed @font-color-base;
+    outline-offset: 2px;
+  }
+
+  &--active {
+    border-bottom: 0;
+  }
+}

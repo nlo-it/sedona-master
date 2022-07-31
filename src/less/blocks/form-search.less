@@ -1,0 +1,165 @@
+.form-search {
+  visibility: hidden;
+  padding: 56px;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: @white;
+  .ps-drop-shadow(#000101; 15%; 90deg; 7px; 0; 15px);
+
+  &--visible {
+    animation: show 0.75s forwards;
+  }
+
+  &--hidden {
+    animation: hide 0.75s forwards;
+  }
+
+  &--opened {
+    visibility: visible;
+  }
+}
+
+.form-search__input-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 29px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.form-search__label {
+  display: block;
+  width: 112px;
+  color: @font-color-heading;
+
+  &--children {
+    width: 65px;
+  }
+}
+
+.form-search__input-text {
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: 0;
+  width: 307px;
+  height: 38px;
+  font: inherit;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: @bg-color-input;
+
+  &:hover {
+    background-color: @bg-color-input--hover;
+  }
+
+  &:focus {
+    background-color: @white;
+    outline: 2px solid @bg-color-input--focus;
+    outline-offset: -2px;
+  }
+}
+
+.form-search__calendar-icon {
+  width: 21px;
+  height: 22px;
+  fill: @bg-color-icon;
+}
+
+.form-search__calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  width: 38px;
+  height: 38px;
+  background-color: @bg-color-input;
+  cursor: pointer;
+
+  &:focus {
+    outline: 2px solid #e5e5e5;
+    outline-offset: -2px;
+  }
+
+  &:hover .form-search__calendar-icon {
+    fill: @black;
+  }
+
+  &:active .form-search__calendar-icon {
+    fill: @bg-color-button-social;
+  }
+}
+
+.form-search__input-number {
+  padding: 0;
+  width: 38px;
+  text-align: center;
+}
+
+.form-search__quantity {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 226px;
+}
+
+.form-search__button {
+  position: relative;
+  display: block;
+  border: 0;
+  width: 38px;
+  height: 38px;
+  font: inherit;
+  background-color: @bg-color-input;
+  cursor: pointer;
+
+  &:focus {
+    outline: 2px solid @bg-color-input--focus;
+    outline-offset: -2px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: @bg-color-icon;
+  }
+
+  &--minus::before {
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 3px;
+  }
+
+  &--plus::before,
+  &--plus::after {
+    width: 11px;
+    height: 3px;
+  }
+
+  &--plus::before {
+    transform: translate(-50%, -50%);
+  }
+
+  &--plus::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: @black;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: @bg-color-button-social;
+  }
+}
+
+.form-search__submit {
+  margin-top: 54px;
+  padding: 16px 10px;
+  width: 100%;
+}

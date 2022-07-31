@@ -1,0 +1,42 @@
+.sort-direction {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .list-reset();
+
+  width: 110px;
+}
+
+.sort-direction__item {
+  padding-left: 13px;
+}
+
+.sort-direction__link {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5.5px solid transparent;
+  border-right: 5.5px solid transparent;
+  border-bottom: 10px solid @bg-color-sorting;
+
+  &:focus {
+    outline: 1px dashed @font-color-base;
+    outline-offset: 2px;
+  }
+
+  &:not(&--active):hover {
+    border-bottom-color: @black;
+  }
+
+  &:not(&--active):active {
+    border-bottom-color: @bg-color-button-social;
+  }
+
+  &--descending {
+    transform: rotate(180deg);
+  }
+
+  &--active {
+    border-bottom-color: @bg-color-button-social;
+  }
+}

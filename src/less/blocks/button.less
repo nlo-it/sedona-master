@@ -1,0 +1,48 @@
+.button {
+  display: block;
+  border: 0;
+  font: inherit;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  color: @font-color-secondary;
+  word-wrap: break-word;
+  text-transform: inherit;
+  cursor: pointer;
+
+  &--brown {
+    background-color: @bg-color-button-form;
+
+    &:hover {
+      background-color: @bg-color-button-form--hover;
+    }
+
+    &:active {
+      color: fade(@font-color-secondary, 30%);
+      background-color: @bg-color-button-form--active;
+    }
+
+    &:focus {
+      outline: 3px solid  @bg-color-button-form--active;
+      outline-offset: -3px;
+    }
+  }
+
+  &--blue {
+    background-color: @bg-color-button-social;
+
+    &:hover {
+      background-color: @bg-color-button-social--hover;
+    }
+
+    &:active {
+      color: fade(@font-color-secondary, 30%);
+      background-color: @bg-color-button-social--active;
+    }
+
+    &:focus {
+      outline: 3px solid  @bg-color-button-social--active;
+      outline-offset: -3px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  .list-reset();
+}
+
+.social-links__item {
+  margin-left: 2px;
+  margin-right: 4px;
+}
+
+.social-links__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+
+  &:active .social-links__icon {
+    fill-opacity: 0.3;
+  }
+}
